@@ -3,19 +3,15 @@ const app = express()
 
 const router = express.Router()
 
-const { addGif, getAllGifs } = require("../controllers/GifControllers")
+const { addGif, getAllGifs, getGif, updateGif, deleteGif } = require("../controllers/GifControllers")
 
 
 router.get("/", getAllGifs)
 router.post("/add-gif", addGif)
+router.get("/:id", getGif)
+router.patch("/update-gif", updateGif)
+router.delete("/delete-gif/:id", deleteGif)
 
-// router.get("/:userId", getUser)
-// router.get("/id/:userId", getUserById)
-// router.post("/",createUsers)
-// router.post("/image", editImage)
-// router.get("/getuser/:email", getUserByEmail)
-// router.patch("/update-user", updateUser)
-// router.delete("/delete-user/:id", deleteUser)
 
 
 module.exports = router;

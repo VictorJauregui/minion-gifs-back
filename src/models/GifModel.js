@@ -12,6 +12,10 @@ const GifSchema = Schema({
     typeGif:{
         type: String,
         required: true
+    },
+    liked:{
+        type: Boolean,
+        required: true
     }
 })
 
