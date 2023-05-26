@@ -12,6 +12,10 @@ cloudinary.config({
 const uploadImage = async (filePath) => {
   return await cloudinary.uploader.upload(filePath, {
     folder: "Gifs",
+    resource_type: "auto",
+    height: 300,
+    width: 300,
+    overwrite: true,
   });
 };
 
